@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>WorksitePro | Future of Workforce & Payment Management</title>
+    <meta name="description" content="WorksitePro simplifies attendance tracking, daily work records, and instant salary disbursements through integrated Razorpay. Manage your real-world team with ease." />
+    <meta name="keywords" content="WorksitePro, workforce management, attendance tracking, construction app, Razorpay payment, daily work logs" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WorksitePro | Next-Gen Workforce Management" />
+    <meta property="og:description" content="Manage Workers, Track Attendance, Control Payments. The ultimate app built for modern worksites." />
+    <meta property="og:image" content="/App_Front_Logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="WorksitePro | Next-Gen Workforce Management" />
+    <meta property="twitter:description" content="Smarter workforce management starts here. Built for real-world teams." />
+  </head>
+  <body>
+    <!-- 2. Preloader / Loading Screen -->
+    <div class="preloader-overlay" id="preloader">
+      <div class="loader-container">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">ESTABLISHING SECURE CONNECTION</div>
+        <div class="loader-percentage" id="loader-pct">0%</div>
+        <div class="loader-terminal" id="loader-term">
+          <div class="terminal-line">> INITIALIZING WORKSITEPRO PROTOCOLS...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Intro Screen Overlay (Dramatic Typing) -->
+    <div class="intro-overlay" id="intro-screen">
+      <h1 id="intro-logo-text">WorksitePro</h1>
+    </div>
+
+    <!-- 4. Three.js Background Viewport -->
+    <div id="canvas-container"></div>
+
+    <!-- Ambient Glow Blobs -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-middle-left"></div>
+    <div class="ambient-glow glow-bottom-right"></div>
+
+    <!-- 5. Navigation Bar -->
+    <header>
+      <div class="logo-container">
+        <div class="nav-logo" style="opacity: 0;">WorksitePro<span class="logo-badge">PRO</span></div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#download">Download App</a></li>
+        </ul>
+        <!-- WhatsApp Call to Action -->
+        <a href="https://wa.me/9235787767" target="_blank" class="whatsapp-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.464L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.59 1.967 14.12 .94 11.516.94c-5.44 0-9.866 4.372-9.87 9.802 0 1.714.459 3.39 1.331 4.871l-.98 3.577 3.66-.948zm12.002-6.53c-.325-.16-1.92-.935-2.217-1.042-.297-.107-.512-.16-.728.16-.215.32-.835 1.043-1.02 1.256-.185.214-.37.24-.695.08-.325-.16-1.372-.499-2.613-1.593-.966-.852-1.617-1.905-1.807-2.225-.19-.32-.02-.492.143-.651.146-.143.325-.374.488-.56.162-.187.216-.32.324-.533.108-.214.054-.4-.027-.56-.081-.16-.727-1.729-.997-2.368-.263-.623-.53-.539-.728-.549-.19-.01-.408-.01-.627-.01-.218 0-.573.08-.873.4-.3.32-1.148 1.107-1.148 2.697 0 1.59 1.173 3.125 1.336 3.339.163.214 2.31 3.486 5.59 4.88.78.33 1.39.527 1.865.676.783.245 1.497.21 2.06.127.628-.093 1.92-.775 2.189-1.52.27-.747.27-1.388.19-1.52-.08-.13-.297-.21-.622-.37z"/>
+          </svg>
+          Contact for Queries
+        </a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- 6. Main Content Area -->
+    <main>
+      
+      <!-- HERO SECTION -->
+      <section id="hero">
+        <div class="hero-container">
+          <div class="hero-text-block">
+            <div class="hero-badge" style="opacity: 0;">WORKFORCE EVOLUTION 2.0</div>
+            <h1 style="opacity: 0;">
+              <span class="gradient-text-blue">Manage Workers.</span><br />
+              <span class="gradient-text-blue">Track Attendance.</span><br />
+              <span class="gradient-text-purple">Control Payments.</span>
+            </h1>
+            <p style="opacity: 0;">
+              Smarter workforce management starts here. WorksitePro delivers a high-performance system for real-world construction, logistics, and contractor teams to log work, verify attendance via OTP, and disburse instant payments securely.
+            </p>
+            <div class="hero-ctas" style="opacity: 0;">
+              <a href="/App_Front_Logo.png" download="WorksitePro.apk" class="btn-apk" id="apk-download-cta">
+                <div class="btn-apk-glow-aura"></div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Download APK
+              </a>
+              <a href="#features" class="btn-secondary">Explore Features</a>
+            </div>
+          </div>
+          <div></div> <!-- Empty right column for Three.js layout positioning -->
+        </div>
+      </section>
+
+      <!-- FEATURES SECTION -->
+      <section id="features">
+        <div class="features-container">
+          <div class="features-header">
+            <div class="hero-badge">Next-Gen Architecture</div>
+            <h2>Built for Modern Worksites</h2>
+            <p>Say goodbye to paper logs and delayed payrolls. WorksitePro offers complete control of daily operations in a unified digital landscape.</p>
+          </div>
+          
+          <div class="features-grid">
+            
+            <!-- Card 1: Attendance -->
+            <div class="feature-card">
+              <div class="card-glow"></div>
+              <div class="card-icon-wrapper">
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+              </div>
+              <h3>Attendance Tracking</h3>
+              <p>Verify check-ins on-site instantly. Log exact clock-in times for workers with precision reporting.</p>
+            </div>
+
+            <!-- Card 2: Payments -->
+            <div class="feature-card">
+              <div class="card-glow"></div>
+              <div class="card-icon-wrapper">
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                  <path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                </svg>
+              </div>
+              <h3>Salary & Payments</h3>
+              <p>Disburse payments seamlessly using integrated Razorpay. Pay labour and mistri teams in one click with secure verification.</p>
+            </div>
+
+            <!-- Card 3: Daily Records -->
+            <div class="feature-card">
+              <div class="card-glow"></div>
+              <div class="card-icon-wrapper">
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                  <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+              </div>
+              <h3>Daily Work Records</h3>
+              <p>Keep logs of materials, completed tasks, and updates on active construction sites directly from the field.</p>
+            </div>
+
+            <!-- Card 4: Monitoring -->
+            <div class="feature-card">
+              <div class="card-glow"></div>
+              <div class="card-icon-wrapper">
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <h3>Workforce Monitoring</h3>
+              <p>Review real-time dashboards segmented by Owner, Admin, Mistri, and Labour profiles to ensure operational alignment.</p>
+            </div>
+
+            <!-- Card 5: Fast & Organized -->
+            <div class="feature-card">
+              <div class="card-glow"></div>
+              <div class="card-icon-wrapper">
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                  <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+              </div>
+              <h3>Fast & Organized</h3>
+              <p>Eliminate database lag. Instantly lookup worker credentials, attendance histories, or past payments in milliseconds.</p>
+            </div>
+
+            <!-- Card 6: Real-Time Sync -->
+            <div class="feature-card">
+              <div class="card-glow"></div>
+              <div class="card-icon-wrapper">
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/>
+                </svg>
+              </div>
+              <h3>Real-Time Data</h3>
+              <p>Powered by MongoDB cloud database. Your attendance updates, logs, and billing files sync across devices instantly.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- DOWNLOAD SECTION WITH SMARTPHONE MOCKUP -->
+      <section id="download">
+        <div class="download-container">
+          <div class="download-content">
+            <div class="hero-badge">Ready for Production</div>
+            <h2>Download WorksitePro & Control Operations</h2>
+            <p>Get the fully-featured Android application to manage your entire workforce on site. Our APK provides rapid attendance checks, encrypted mobile wallet routing for payments, and daily activity logs built to run efficiently in low-network regions.</p>
+            
+            <div class="pulse-glow-wrapper">
+              <div class="pulse-glow"></div>
+              <a href="/App_Front_Logo.png" download="WorksitePro.apk" class="btn-apk" style="margin-top: 0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Download APK
+              </a>
+            </div>
+          </div>
+          
+          <!-- Smartphone Showcase Mockup -->
+          <div class="phone-mockup-wrapper">
+            <div class="phone-screen">
+              <div class="phone-notch">
+                <div class="phone-speaker"></div>
+                <div class="phone-camera"></div>
+              </div>
+              
+              <!-- Carousel slides simulating actual application views -->
+              <div class="phone-carousel">
+                
+                <!-- Slide 1: Welcome Splash -->
+                <div class="phone-slide active slide-splash">
+                  <img src="/App_logo.jpg" alt="WorksitePro App Logo" class="app-logo-mock" />
+                  <div class="app-title-mock">WorksitePro</div>
+                  <div class="app-version-mock">V1.0.0 // PRODUCTION ACTIVE</div>
+                </div>
+
+                <!-- Slide 2: Login Interface -->
+                <div class="phone-slide slide-login">
+                  <div class="slide-header">
+                    <span>PORTAL SECURE</span>
+                    <span class="phone-time">10:42 AM</span>
+                  </div>
+                  <div class="login-form-mock">
+                    <div class="login-title">Verify OTP</div>
+                    <div class="login-notes-mock" style="text-align: left; margin-bottom: 5px;">Enter mobile number to receive verification code.</div>
+                    <input type="text" class="login-input-mock" value="+91 92357 87767" disabled />
+                    <input type="text" class="login-input-mock" value="[ •  •  •  •  •  • ]" style="text-align: center;" disabled />
+                    <button class="login-btn-mock">VERIFIED OWNER</button>
+                  </div>
+                  <div class="login-notes-mock">Powered by Firebase Auth. OTP dispatch rates cheapest on Fast2sms.</div>
+                </div>
+
+                <!-- Slide 3: Dashboard Mockup -->
+                <div class="phone-slide slide-dashboard">
+                  <div class="slide-header">
+                    <span>WORKSITE DASHBOARD</span>
+                    <span class="phone-time">10:43 AM</span>
+                  </div>
+                  
+                  <div class="dash-stats-grid">
+                    <div class="dash-stat-card">
+                      <span class="val">38 / 42</span>
+                      <span class="lbl">ACTIVE WORKERS</span>
+                    </div>
+                    <div class="dash-stat-card">
+                      <span class="val purple">₹1,84.5K</span>
+                      <span class="lbl">PAID RAZORPAY</span>
+                    </div>
+                  </div>
+
+                  <div class="dash-list-title">
+                    <span>ON SITE TODAY</span>
+                    <span>90.4% PRESENT</span>
+                  </div>
+                  
+                  <div class="dash-workers-list">
+                    <div class="dash-worker-item">
+                      <span>Alex Mercer (Foreman)</span>
+                      <span class="present">Present (08:30)</span>
+                    </div>
+                    <div class="dash-worker-item">
+                      <span>R. Sharma (Labour)</span>
+                      <span class="present">Present (08:45)</span>
+                    </div>
+                    <div class="dash-worker-item">
+                      <span>J. Kumar (Labour)</span>
+                      <span class="present">Present (08:52)</span>
+                    </div>
+                    <div class="dash-worker-item">
+                      <span>V. Singh (Labour)</span>
+                      <span class="absent">Absent</span>
+                    </div>
+                  </div>
+
+                  <div class="dash-nav-mock">
+                    <span class="active">● Home</span>
+                    <span>■ Attendance</span>
+                    <span>▲ Payments</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Carousel Dots Indicator -->
+              <div class="phone-dots">
+                <span class="phone-dot active"></span>
+                <span class="phone-dot"></span>
+                <span class="phone-dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="footer-divider-glow"></div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">WorksitePro</div>
+          <p>Cybernetic workforce ecosystems designed for real-world builders. Manage attendance, track daily files, and pay workers safely.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download APK</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Security</h4>
+          <ul>
+            <li><a href="#">Razorpay Encrypted</a></li>
+            <li><a href="#">Firebase Authenticated</a></li>
+            <li><a href="#">MongoDB Cloud Sync</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Social Media</h4>
+          <p style="margin-bottom: 12px; font-size: 0.9rem; color: var(--color-text-muted);">Connect with our engineering portal:</p>
+          <div class="footer-socials">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/ankur-shakya-99bb17334/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ankur_shakya._/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0 3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/Ankursh121" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorksitePro. All rights reserved. Managed with premium protocols.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main Module Script -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
