@@ -163,7 +163,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(3.5rem, 12vw, 7.5rem);
   font-weight: 900;
   letter-spacing: 4px;
   color: #ffffff;
