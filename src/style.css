@@ -88,6 +88,28 @@ body {
   gap: 20px;
 }
 
+.loader-logo-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid rgba(155, 81, 224, 0.4);
+  box-shadow: 0 0 25px rgba(155, 81, 224, 0.35);
+  margin-bottom: 10px;
+  animation: logoPulse 2s infinite ease-in-out;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(155, 81, 224, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(155, 81, 224, 0.55), 0 0 15px rgba(0, 242, 254, 0.3);
+  }
+}
+
 .loader-spinner {
   width: 80px;
   height: 80px;
@@ -264,6 +286,27 @@ header {
   text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
   opacity: 0; /* Animated in by GSAP */
   transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1.5px solid rgba(155, 81, 224, 0.35);
+  box-shadow: 0 0 15px rgba(155, 81, 224, 0.25);
+}
+
+.footer-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1.5px solid rgba(0, 242, 254, 0.35);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
 }
 
 .logo-badge {
@@ -1242,6 +1285,9 @@ footer {
   font-weight: 800;
   color: #fff;
   text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .footer-brand p {
