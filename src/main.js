@@ -79,6 +79,7 @@ function initializeWebsite() {
     // Once typing and navbar animations complete, activate interactive components
     initMobileMenu();
     initPhoneCarousel();
+    initWebUseDropdown();
   });
 }
 
@@ -143,4 +144,27 @@ function initPhoneCarousel() {
   });
 
   startTimer();
+}
+
+// 6. Web Use Dropdown Interaction
+function initWebUseDropdown() {
+  const container = document.querySelector('.web-use-dropdown-container');
+  const trigger = document.getElementById('web-use-trigger');
+
+  if (!container || !trigger) return;
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isActive = container.classList.contains('active');
+    container.classList.toggle('active');
+    trigger.setAttribute('aria-expanded', !isActive);
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!container.contains(e.target)) {
+      container.classList.remove('active');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
 }

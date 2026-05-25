@@ -31,6 +31,8 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: var(--bg-primary);
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -39,6 +41,9 @@ body {
   background-color: var(--bg-primary);
   overflow-x: hidden;
   min-height: 100vh;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Custom Scrollbar */
@@ -281,6 +286,13 @@ nav {
   gap: 3rem;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 1002;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -323,23 +335,23 @@ nav {
   width: 100%;
 }
 
-/* WhatsApp Nav Button */
+/* WhatsApp Hero CTA Button */
 .whatsapp-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(37, 211, 102, 0.15);
-  border: 1px solid rgba(37, 211, 102, 0.4);
+  gap: 10px;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.35);
   color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-family: var(--font-body);
+  padding: 18px 36px;
+  border-radius: 16px;
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 0 10px rgba(37, 211, 102, 0.1);
-  opacity: 0; /* Animated by GSAP */
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.15);
+  backdrop-filter: blur(8px);
 }
 
 .whatsapp-btn svg {
@@ -348,14 +360,155 @@ nav {
 }
 
 .whatsapp-btn:hover {
-  background: rgba(37, 211, 102, 0.3);
+  background: rgba(37, 211, 102, 0.25);
   border-color: var(--color-neon-green);
-  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
-  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.4);
+  transform: translateY(-3px);
 }
 
 .whatsapp-btn:hover svg {
   transform: scale(1.15) rotate(10deg);
+}
+
+/* Web Use Dropdown Container */
+.web-use-dropdown-container {
+  position: relative;
+}
+
+/* Web Use Trigger Button */
+.web-use-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(155, 81, 224, 0.12);
+  border: 1px solid rgba(155, 81, 224, 0.35);
+  color: #ffffff;
+  padding: 18px 36px;
+  border-radius: 16px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 0 15px rgba(155, 81, 224, 0.15);
+  backdrop-filter: blur(8px);
+  outline: none;
+}
+
+.web-use-btn svg {
+  stroke: var(--color-secondary);
+  transition: transform 0.3s ease;
+}
+
+.web-use-btn .chevron-icon {
+  stroke: var(--color-text-muted);
+  transition: transform 0.3s ease;
+}
+
+.web-use-btn:hover {
+  background: rgba(155, 81, 224, 0.25);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 20px rgba(155, 81, 224, 0.4);
+  transform: translateY(-2px);
+}
+
+.web-use-btn:hover .chevron-icon {
+  transform: translateY(2px);
+  stroke: #ffffff;
+}
+
+/* Active State for Trigger */
+.web-use-dropdown-container.active .web-use-btn {
+  background: rgba(155, 81, 224, 0.35);
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+}
+
+.web-use-dropdown-container.active .web-use-btn .chevron-icon {
+  transform: rotate(180deg);
+  stroke: var(--color-secondary);
+}
+
+/* Dropdown Menu */
+.web-use-dropdown-menu {
+  position: absolute;
+  bottom: calc(100% + 15px);
+  left: 0;
+  width: 290px;
+  background: rgba(8, 9, 28, 0.96);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(155, 81, 224, 0.3);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(155, 81, 224, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.3s;
+  z-index: 1001;
+}
+
+.web-use-dropdown-container.active .web-use-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Inner Content */
+.dropdown-inner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dropdown-tag {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+}
+
+.dropdown-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* Action button inside dropdown */
+.dropdown-action-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 114, 255, 0.2);
+}
+
+.dropdown-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.3), 0 0 15px rgba(155, 81, 224, 0.3);
+}
+
+.dropdown-action-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-action-btn:hover svg {
+  transform: translateX(4px);
 }
 
 /* Mobile Menu Button */
@@ -1267,10 +1420,7 @@ footer {
     transform: none !important;
   }
 
-  header.nav-active .whatsapp-btn {
-    opacity: 1 !important;
-    transform: none !important;
-  }
+
 
   .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
