@@ -1383,6 +1383,37 @@ footer {
   gap: 20px;
 }
 
+/* 13.5 Mobile-Only Hero CTAs vs Desktop Header Actions */
+.mobile-only-cta {
+  display: none !important;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 1002;
+}
+
+/* Compact header sizes on desktop/laptop */
+.header-actions .web-use-btn,
+.header-actions .whatsapp-btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+/* Position header actions dropdown to open downwards */
+.header-actions .web-use-dropdown-menu {
+  bottom: auto;
+  top: calc(100% + 15px);
+  transform: translateY(12px);
+}
+
+.header-actions .web-use-dropdown-container.active .web-use-dropdown-menu {
+  transform: translateY(0);
+}
+
 /* 14. Responsiveness */
 @media (max-width: 992px) {
   header {
@@ -1430,6 +1461,18 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .header-actions {
+    display: none !important;
+  }
+
+  .mobile-only-cta {
+    display: inline-block !important;
+  }
+
+  a.mobile-only-cta {
+    display: inline-flex !important;
+  }
+
   nav {
     display: none; /* Hide default nav link block, we can convert into a clean responsive dropdown overlay if clicked */
   }

@@ -14,7 +14,7 @@ export class GSAPAnimations {
     const introOverlay = document.querySelector('.intro-overlay');
     const introLogoText = document.getElementById('intro-logo-text');
     const navLogo = document.querySelector('.nav-logo');
-    const navItems = document.querySelectorAll('.nav-links li');
+    const navItems = document.querySelectorAll('.nav-links li, .header-actions > *');
     const heroContent = document.querySelectorAll('.hero-text-block > *, .hero-ctas > *');
 
     if (!introOverlay || !introLogoText || !navLogo) {

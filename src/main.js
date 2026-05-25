@@ -148,23 +148,38 @@ function initPhoneCarousel() {
 
 // 6. Web Use Dropdown Interaction
 function initWebUseDropdown() {
-  const container = document.querySelector('.web-use-dropdown-container');
-  const trigger = document.getElementById('web-use-trigger');
+  const containers = document.querySelectorAll('.web-use-dropdown-container');
 
-  if (!container || !trigger) return;
+  containers.forEach((container) => {
+    const trigger = container.querySelector('.web-use-btn');
+    if (!trigger) return;
 
-  trigger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isActive = container.classList.contains('active');
-    container.classList.toggle('active');
-    trigger.setAttribute('aria-expanded', !isActive);
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = container.classList.contains('active');
+
+      // Close other dropdowns
+      containers.forEach((otherContainer) => {
+        if (otherContainer !== container) {
+          otherContainer.classList.remove('active');
+          const otherTrigger = otherContainer.querySelector('.web-use-btn');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      container.classList.toggle('active');
+      trigger.setAttribute('aria-expanded', !isActive);
+    });
   });
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   document.addEventListener('click', (e) => {
-    if (!container.contains(e.target)) {
-      container.classList.remove('active');
-      trigger.setAttribute('aria-expanded', 'false');
-    }
+    containers.forEach((container) => {
+      if (!container.contains(e.target)) {
+        container.classList.remove('active');
+        const trigger = container.querySelector('.web-use-btn');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
 }
